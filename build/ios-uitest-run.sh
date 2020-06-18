@@ -64,10 +64,10 @@ chmod -R +x $UNO_UITEST_IOSBUNDLE_PATH
 cd $UNO_UITEST_SCREENSHOT_PATH
 
 mono $BUILD_SOURCESDIRECTORY/build/NUnit.ConsoleRunner.3.10.0/tools/nunit3-console.exe \
-	--inprocess \
 	--agents=1 \
 	--workers=1 \
 	--result=$BUILD_SOURCESDIRECTORY/build/TestResult.xml \
 	--where "$TEST_FILTERS" \
+	--timeout=120000 \
 	$BUILD_SOURCESDIRECTORY/src/SamplesApp/SamplesApp.UITests/bin/Release/net47/SamplesApp.UITests.dll \
 	|| true
