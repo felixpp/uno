@@ -268,5 +268,17 @@ namespace SamplesApp.UITests
 				return _app.GetScreenDimensions();
 			}
 		}
+
+		internal double GetDisplayScreenScaling()
+		{
+			var scalingRaw = _app.InvokeGeneric("browser:SampleRunner|GetDisplayScreenScaling", "0");
+
+			if (double.TryParse(scalingRaw?.ToString(), out var scaling))
+			{
+				return scaling / 100;
+			}
+
+			return 1.0;
+		}
 	}
 }
