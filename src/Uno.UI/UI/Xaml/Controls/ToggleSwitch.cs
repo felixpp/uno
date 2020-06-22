@@ -35,7 +35,7 @@ namespace Windows.UI.Xaml.Controls
 			DefaultStyleKey = typeof(ToggleSwitch);
 		}
 
-		protected override void OnLoaded()
+		private protected override void OnLoaded()
 		{
 			base.OnLoaded();
 
@@ -51,7 +51,7 @@ namespace Windows.UI.Xaml.Controls
 
 		partial void OnLoadedPartial();
 
-		protected override void OnUnloaded()
+		private protected override void OnUnloaded()
 		{
 			base.OnUnloaded();
 
